@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="description" content="Vajratras Silambam Academy — Preserving the ancient Tamil martial art with discipline, power, and tradition." />
+  <meta name="keywords" content="Silambam, Tamil martial art, self defense, staff fighting, Vajratras Academy"/>
+  <meta name="author" content="Vajratras Silambam Academy"/>
+  <title>Vajrastras Silambam Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7a1cd070ce.js" crossorigin="anonymous"></script>
+  <style>
+    /* ===== GLOBAL STYLES ===== */
+    :root {
+      --white: #ffffff;
+      --gold: #ffd700;
+      --red: #c1272d;
+      --darkgray: #333333;
+      --black: #000000;
+      --lightgray: #f5f5f5;
+      --shadow-3d: 0 8px 20px rgba(0,0,0,0.15), 0 4px 6px rgba(0,0,0,0.1);
+      --hover-3d: 0 12px 30px rgba(0,0,0,0.25), 0 6px 10px rgba(0,0,0,0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--white);
+      color: var(--black);
+      overflow-x: hidden;
+      line-height: 1.6;
+      background-color: rgb(0, 191, 255);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--black);
+      text-shadow: 
+        1px 1px 0 rgba(0,0,0,0.1),
+        2px 2px 0 rgba(0,0,0,0.05);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul { list-style: none; }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, var(--gold), #ffaa00);
+      color: var(--black);
+      font-weight: 700;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: var(--shadow-3d);
+      border: none;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      overflow: hidden;
+      transform: translateZ(0);
+      min-width: 160px;
+      text-align: center;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+      transition: 0.6s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:hover {
+      transform: translateY(-6px) translateZ(10px);
+      box-shadow: var(--hover-3d);
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 50px;
+      color: var(--black);
+      position: relative;
+      text-shadow: 
+        2px 2px 0 rgba(0,0,0,0.08),
+        4px 4px 0 rgba(0,0,0,0.03);
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 5px;
+      background: var(--gold);
+      border-radius: 3px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      padding: 20px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      padding: 14px 0;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+      background: rgba(255,255,255,1);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--black);
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.05);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-link {
+      position: relative;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--black);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--black);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Mobile menu toggle */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: var(--black);
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      height: 110vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.95)), url('https://images.unsplash.com/photo-1574643147860-652f137d01a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      margin-top: 10px;
+
+    }
+
+    .hero-content {
+      max-width: 950px;
+      padding: 50px;
+      background: rgba(255,255,255,0.92);
+      border-radius: 20px;
+      box-shadow: var(--shadow-3d);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0,0,0,0.08);
+      transform: translateZ(20px);
+    }
+
+    .hero h1 {
+      font-size: 3.8rem;
+      margin-bottom: 25px;
+      color: var(--black);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      line-height: 1.7;
+      color: var(--black);
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about-section {
+      background-color: var(--lightgray);
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+      color: var(--black);
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: var(--shadow-3d);
+      transition: transform 0.4s ease;
+    }
+
+    .about-image img:hover {
+      transform: scale(1.03) translateY(-8px);
+      box-shadow: var(--hover-3d);
+    }
+
+    /* ===== STATS COUNTER ===== */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      margin-top: 60px;
+    }
+
+    .stat-box {
+      text-align: center;
+      padding: 25px 30px;
+      background: var(--white);
+      border-radius: 16px;
+      min-width: 200px;
+      box-shadow: var(--shadow-3d);
+      transition: transform 0.4s ease;
+    }
+
+    .stat-box:hover {
+      transform: translateY(-8px) translateZ(10px);
+      box-shadow: var(--hover-3d);
+    }
+
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 8px;
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.05);
+    }
+
+    .stat-label {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    /* ===== ACHIEVEMENTS ===== */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 35px;
+    }
+
+    .achievement-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      transition: all 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-3d);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .achievement-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--gold);
+      box-shadow: 0 3px 8px rgba(255,215,0,0.3);
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-10px) translateZ(15px);
+      box-shadow: var(--hover-3d);
+    }
+
+    .achievement-card h3 {
+      color: var(--black);
+      margin: 18px 0 15px;
+      font-size: 1.6rem;
+    }
+
+    .achievement-card p {
+      color: var(--black);
+      font-size: 1.05rem;
+      opacity: 0.9;
+    }
+
+    /* ===== TROPHY GALLERY ===== */
+    .trophy-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+
+    .trophy-item {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow-3d);
+      transition: all 0.4s ease;
+      transform-style: preserve-3d;
+    }
+
+    .trophy-item:hover {
+      transform: scale(1.05) rotateX(5deg) rotateY(5deg) translateZ(20px);
+      box-shadow: var(--hover-3d);
+    }
+
+    .trophy-item img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    /* ===== CATEGORIES ===== */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .category-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      height: 340px;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: var(--shadow-3d);
+      transform-style: preserve-3d;
+    }
+
+    .category-card:hover {
+      transform: translateY(-12px) rotateX(4deg) translateZ(20px);
+      box-shadow: var(--hover-3d);
+    }
+
+    .category-img {
+      height: 170px;
+      background: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4.2rem;
+      color: var(--gold);
+      transition: transform 0.4s ease;
+    }
+
+    .category-card:hover .category-img {
+      transform: scale(1.1);
+    }
+
+    .category-content {
+      padding: 25px;
+      text-align: center;
+    }
+
+    .category-content h3 {
+      color: var(--black);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    .category-content p {
+      color: var(--black);
+      font-size: 1rem;
+      opacity: 0.85;
+      height: 70px;
+      overflow: hidden;
+    }
+
+    /* ===== CONTACT / GALLERY ===== */
+    .contact-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .contact-img {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-3d);
+    }
+
+    .contact-img img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .contact-img:hover img {
+      transform: scale(1.08) translateZ(10px);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--black);
+      padding: 70px 0 40px;
+      color: var(--white);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .footer-col h3 {
+      color: var(--gold);
+      margin-bottom: 25px;
+      font-size: 1.6rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-col h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--gold);
+    }
+
+    .footer-col p, .footer-col a {
+      color: #ddd;
+      margin-bottom: 12px;
+      display: block;
+      font-size: 1.02rem;
+    }
+
+    .footer-col a:hover {
+      color: var(--gold);
+      text-shadow: 0 0 8px rgba(255,215,0,0.6);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .social-link {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      /* align-items: center; */
+      /* justify-content: center; */
+      /* background: rgba(255,255,255,0.1); */
+      border-radius: 50%;
+      /* color: var(--gold); */
+      font-size: 1.1rem;
+      transition: all 0.35s;
+      /* box-shadow: 0 4px 12px rgba(0,0,0,0.2); */
+    }
+
+    .social-link:hover {
+      /* background: var(--gold); */
+      color: var(--black);
+      transform: translateY(-5px) scale(1.15);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .instagram-icon {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+
+    /* ===== UTILITIES ===== */
+    .hidden { display: none; }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0) translateZ(0);
+    }
+
+    /* ===== MOBILE-FIRST RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      /* Improve tap targets */
+      .btn, .nav-link, .social-link {
+        touch-action: manipulation;
+      }
+      .hero{
+        width: 480px;
+      }
+      /* Hero */
+      .hero h1 {
+        font-size: 2.4rem;
+        line-height: 1.3;
+      }
+      .hero p {
+        font-size: 1.15rem;
+        line-height: 1.6;
+      }
+      .hero-content {
+        min-width: 140%;
+        padding:5px 5px;
+        margin-right: 30px;
+      }
+      .hero-content img{
+        width: 100px;
+      }
+
+      /* Navbar */
+      /* .hamburger { display: flex; } */
+      .nav-links {
+        display: none;
+        flex-direction: row;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10vw;
+        height: 150vh;
+        background: var(--white);
+        padding-top: 80px;
+        text-align: center;
+        z-index: 1500;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        animation: slideIn 0.4s ease forwards;
+      }
+
+      @keyframes slideIn {
+        from { transform: translateY(-100%); }
+        to { transform: translateY(0); }
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .nav-menu.active .nav-link {
+        padding: 18px 0;
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+
+      /* Layout */
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      /* Stats */
+      .stats {
+        gap: 20px;
+        grid-template-columns: 1fr;
+      }
+      .stat-box {
+        padding: 22px 15px;
+        min-width: auto;
+      }
+      .stat-number { font-size: 2.8rem; }
+
+      /* Grids */
+      .achievements-grid,
+      .trophy-gallery,
+      .categories-grid,
+      .contact-gallery {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .category-card { height: auto; }
+      .category-img { height: 150px; font-size: 3.5rem; }
+
+      /* Footer */
+      .footer-col { text-align: center; }
+      .social-links { justify-content: center; }
+      .social-link { width: 56px; height: 56px; font-size: 1.5rem; }
+      footer input[type="email"] {
+        padding: 14px;
+        font-size: 1rem;
+        width: 100%;
+      }
+
+      /* Spacing */
+      .section { padding: 60px 0; }
+      .section-title { 
+        font-size: 2rem; 
+        margin-bottom: 35px; 
+      }
+
+      /* Logo scale */
+      .logo { font-size: 1.5rem; }
+    }
+
+    @media (min-width: 480px) {
+      .hero img{
+        width: 450px;
+      }
+      .hero-content  img{
+      height: 290px;
+      width: 50px;
+    }
+    #msme-img{
+      width: 100px;
+      height: 60px;
+    }
+    /* .about-image{
+      height: 500px;
+    } */
+      .hero h1 { font-size: 2rem; }
+      .section-title { font-size: 1.8rem; }
+      .btn { 
+        padding: 14px 20px; 
+        font-size: 0.95rem;
+        min-width: 140px;
+      }
+      .stat-number { font-size: 2.4rem; }
+    }
+.hero-content img{
+      height: 490px;
+      width: 510px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">Vajrastras</a>
+      <img id="msme-img" src="msme.jpg">
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#categories" class="nav-link">Categories</a></li>
+        <li><a href="#contact" class="nav-link">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HOME PAGE -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <img id= "vajrastaras-img" src="vajrastras img.jpg">
+    </div>
+  </section>
+
+  <!-- ABOUT PAGE -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Rooted in Heritage, Training for Tomorrow</h2>
+          <p>Founded in 2024 by <strong>Varatha M</strong><p>Vajrastras Silambam Academy trains students in the ancient Tamil martial art Silambam — building strength, discipline, and confidence.
+We prepare warriors for state, national, and international levels, preserving our Tamil heritage with pride.
+Join Vajrastras Silambam Academy — Where Tradition Becomes Power.</p>
+          <p>Our training integrates physical mastery, ethical values, breathwork (<em>pranayama</em>), and cultural storytelling.</p>
+          <p>We train students of all ages, emphasizing <strong>discipline, focus, humility, and service</strong>.</p>
+        </div>
+        <div class="about-image">
+          <img src="img 12.jpg" alt="Silambam training session">
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-box fade-in">
+          <div class="stat-number" id="years">0</div>
+          <div class="stat-label">Years of Legacy</div>
+        </div>
+        <div class="stat-box fade-in">
+          <div class="stat-number" id="students">0</div>
+          <div class="stat-label">Students Trained</div>
+        </div>
+        <div class="stat-box fade-in">
+          <div class="stat-number" id="trophies">0</div>
+          <div class="stat-label">Trophies Won</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Achievements</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card fade-in">
+          <h3>National Champions</h3>
+          <p>Team Gold at All India Silambam Championship 2025</p>
+        </div>
+        <div class="achievement-card fade-in">
+          <h3>World Recognition</h3>
+          <p>Vajrastras warriors etched their legacy with Guinness, Nobel, and Graham Bell World Records — legends in motion.</p>
+        </div>    
+      </div><br>
+
+      <h2 class="section-title">Trophy Gallery</h2>
+      <div class="trophy-gallery">
+        <div class="trophy-item fade-in">
+          <img src="img2.jpg" alt="Trophy 1">
+        </div>
+        <div class="trophy-item fade-in">
+          <img src="img5.jpg" alt="Trophy 2">
+        </div>
+        <div class="trophy-item fade-in">
+          <img src="img8.jpg" alt="Medal display">
+        </div>
+        <div class="trophy-item fade-in">
+          <img src="img3.jpg" alt="Award ceremony">
+        </div>
+        <div class="trophy-item fade-in">
+          <img src="img4.jpg" alt="Award ceremony">
+        </div>
+        <div class="trophy-item fade-in">
+          <img src="img9.jpg" alt="Award ceremony">
+        </div>
+        <div class="trophy-item fade-in">
+          <img src="img10.jpg" alt="Award ceremony">
+        </div>
+        <div class="trophy-item fade-in">
+          <img src="img6.jpg" alt="Award ceremony">
+        </div>
+        <div class="trophy-item fade-in">
+          <img src="img7.jpg" alt="Award ceremony">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section" id="categories">
+    <div class="container">
+      <h2 class="section-title">Training Categories</h2>
+      <div class="categories-grid">
+        <div class="category-card fade-in">
+          <div class="category-img">🎋</div>
+          <div class="category-content">
+            <h3>Beginner</h3>
+            <p>Foundations of stance, grip, and basic strikes.</p>
+          </div>
+        </div>
+        <div class="category-card fade-in">
+          <div class="category-img">⚡</div>
+          <div class="category-content">
+            <h3>Intermediate</h3>
+            <p>Complex combos, footwork, and controlled sparring.</p>
+          </div>
+        </div>
+        <div class="category-card fade-in">
+          <div class="category-img">🔥</div>
+          <div class="category-content">
+            <h3>Advanced</h3>
+            <p>Weapon mastery: staff, sword, deer horn & forms.</p>
+          </div>
+        </div>
+        <div class="category-card fade-in">
+          <div class="category-img">👧</div>
+          <div class="category-content">
+            <h3>Kids Training</h3>
+            <p>Ages 6–14. Builds focus, confidence, respect.</p>
+          </div>
+        </div>
+        <div class="category-card fade-in">
+          <div class="category-img">🛡</div>
+          <div class="category-content">
+            <h3>Women’s Self Defense</h3>
+            <p>Tactical Silambam for real-world safety.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Training Moments</h2>
+      <div class="contact-gallery">
+        <!-- <div class="contact-img fade-in">
+          <video conrols>
+            <source src="vdeo.mp4" type="video/mp4">
+          </video>
+        </div> -->
+        <center>
+        <iframe src="vdeo.mp4" style="width: 400px; height: 300px;"></iframe>
+        </center>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>Vajrastras Academy</h3>
+          <p>A-Ground,Kovaipudur<br>Coimbatore – 641042</p>
+          <p>📞 +91 8300054090 <br> 📞 +91 7094054090<br>✉ vajrastrasacademy@gmail.com</p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#categories">Training</a>
+          <a href="#contact">Gallery</a>
+        </div>
+        <div class="footer-col">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="https://www.instagram.com/vajrastras_silambam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-link" aria-label="Instagram">
+              <svg class="instagram-icon" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+          </div>
+          
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 Vajratras Silambam Academy<br>
+        Preserving Tamil Heritage, One Strike at a Time.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // DOM Elements
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navLinks');
+    const sections = document.querySelectorAll('section');
+    const counters = {
+      years: { el: document.getElementById('years'), target: 2, duration: 2000 },
+      students: { el: document.getElementById('students'), target: 200, duration: 2500 },
+      trophies: { el: document.getElementById('trophies'), target: 50, duration: 2200 }
+    };
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    // Smooth Scroll & Active Link
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        window.scrollTo({
+          top: targetSection.offsetTop - 80,
+          behavior: 'smooth'
+        });
+
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+
+        if (window.innerWidth <= 768) {
+          navMenu.classList.remove('active');
+          hamburger.classList.remove('active');
+        }
+      });
+    });
+
+    // Scroll Effects
+    window.addEventListener('scroll', () => {
+      // Navbar shrink
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+
+      // Fade-in elements
+      fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100 && rect.bottom > 0 && !el.classList.contains('appear')) {
+          el.classList.add('appear');
+        }
+      });
+
+      // Auto-highlight nav
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href').substring(1) === current);
+      });
+    });
+
+    // Mobile Menu Toggle
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Counter Animation
+    function animateCounter(counter) {
+      let start = 0;
+      const stepTime = Math.abs(Math.floor(counter.duration / counter.target));
+      const timer = setInterval(() => {
+        start += 1;
+        if (start > counter.target) {
+          start = counter.target;
+          clearInterval(timer);
+        }
+        counter.el.textContent = start.toLocaleString();
+      }, stepTime);
+    }
+
+    // Trigger counters on view
+    const statsSection = document.querySelector('.stats');
+    if (statsSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            Object.values(counters).forEach(c => animateCounter(c));
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      observer.observe(statsSection);
+    }
+
+    // Close mobile menu on resize > 768px
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
